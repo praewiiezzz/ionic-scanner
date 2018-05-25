@@ -7,8 +7,16 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  barcodeText = "Scan something...";
+  barcodeFormat = "Scan something...";
 
+  constructor(public navCtrl: NavController, public scanner: BarcodeScanner) {
+
+  }
+
+  public scan() 
+  {
+    
   }
 
 }
