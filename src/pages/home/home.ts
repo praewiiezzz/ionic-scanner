@@ -16,7 +16,9 @@ export class HomePage {
   }
 
   public scan() {
-    this.scanner.scan().then((barcodeData) => {
+    let option = {showTorchButton : true};
+
+    this.scanner.scan(option).then((barcodeData) => {
       console.log('BarcodeData', barcodeData)
       this.barcodeText = barcodeData.text;
       this.barcodeFormat = barcodeData.format;
